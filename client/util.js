@@ -25,7 +25,7 @@ export const checkPushManager = async () => {
     }
     alert('Push manager and subscription exists');
   } catch (err) {
-    console.error('error while creating subscription', err);
-    alert(`Error while creating subscription ${err}`);
+    console.error('error while getting subscription', err);
+    alert(`Error while getting subscription ${err}`);
   }
 };
