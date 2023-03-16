@@ -1,5 +1,7 @@
 ## When testing web push api on iOS 16.4 beta 3 I ran into some issues. Here is a quick test to showcase the issues
 
+The code in question can be found in client/util.js and the site can be tested using HTTPS with the instructions below.
+
 ### Getting Started
 
 - run ``npm install``
@@ -9,6 +11,8 @@
 Note: if localtunnel is not working, you can use https://localhost.run to create a tunnel to your local machine. To do so, run the following command:
 
 ``ssh -R 80:localhost:3000 localhost.run``
+
+some secure browsing software like WithSecure might not like the urls it provides as the domains are also used for nefarious purposes.
 
 ### Prerequisites
 
