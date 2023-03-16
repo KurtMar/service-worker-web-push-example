@@ -1,12 +1,13 @@
 ## When testing web push api on iOS 16.4 beta 3 I ran into some issues. Here is a quick test to showcase the issues
 
-The code in question can be found in client/util.js and the site can be tested using HTTPS with the instructions below.
+The code in question can be found in client/util.js and the site can be tested locally using HTTPS with the instructions below.
 
 ### Getting Started
 
 - run ``npm install``
 - run ``npm run http`` to server the content on port 3000
 - run ``npm run https-tunnel`` in another terminal session to open a https localtunnel (note that localtunnel may be very slow and even return 504 Gateway timeouts)
+- open the url provided by localtunnel in Safari on iOS 16.4 beta 3 on the Simulator. Make sure 'Notifications' is enabled in Safari's experimental features.
 
 Note: if localtunnel is not working, you can use https://localhost.run to create a tunnel to your local machine. To do so, run the following command:
 

@@ -16,6 +16,7 @@ export const checkPushManager = async () => {
       alert('No pushManager');
       return
     }
+    alert('Push manager exists, trying to get subscription');
     const subscription = await pushManager.getSubscription()
     console.log('subscription', subscription)
     if (!subscription) {
