@@ -9,11 +9,14 @@ if ('serviceWorker' in navigator) {
         return registration.update();
       })
       .then((registration) => console.log(`ServiceWorker updated`))
-      .catch((err) => console.log('ServiceWorker registration failed: ', err));
+      .catch((err) => {
+        console.log('ServiceWorker registration failed: ', err)
+        alert(`ServiceWorker registration failed: ${err}`)
+      });
   });
 }
 
-['getPermission', 'getSubscription', 'sendToServer', 'sendMessageViaServer', 'displayNotificationDirectly'].forEach(
+['getPermission', 'checkPushManager'].forEach(
   (func) => {
     document.getElementById(`btn-${func}`).addEventListener('click', () => {
       util[func]();

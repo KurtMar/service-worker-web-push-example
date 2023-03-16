@@ -1,16 +1,18 @@
-# Web Push API Example including Service Worker and minimalistic Application Server
+## When testing web push api on iOS 16.4 beta 3 I ran into some issues. Here is a quick test to showcase the issues
 
-This is an out of the box working example for Web Push Notifications.
-It consists of a client with a Service Worker to register for push messages and a simple application server, which is using the [web-push](https://www.npmjs.com/package/web-push) lib and [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) to send the notification.
+### Getting Started
 
-## Getting Started
+- run ``npm install``
+- run ``npm run http`` to server the content on port 3000
+- run ``npm run https-tunnel`` in another terminal session to open a https localtunnel (note that localtunnel may be very slow and even return 504 Gateway timeouts)
 
-- clone the repo and install dependencies
-- run 'npm run serve` for the client
-- run 'npm run start` for the server in parallel
-- go to http://localhost:8080 and read on there
+Note: if localtunnel is not working, you can use https://localhost.run to create a tunnel to your local machine. To do so, run the following command:
 
-## Prerequisites
+``ssh -R 80:localhost:3000 localhost.run``
 
-- Node.js 14 or higher
-- some latest browsers
+### Prerequisites
+
+- Node.js
+
+This sample is based on the following git repo: https://github.com/pirminrehm/service-worker-web-push-example.git and is
+used only to showcase the issues. This style of code will not be used for production.
